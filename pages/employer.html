@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VietnamWorks Employer</title>
+    <link rel="stylesheet" href="/css/employer.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header__inner">
+        <div class="logo">vietnamworks</div>
+
+        <nav class="nav">
+          <a href="#">Dịch vụ</a>
+          <a href="#">HR Insider</a>
+          <a href="#">Giới thiệu</a>
+          <a href="#" id="open-contact">Liên hệ</a>
+          <span class="divider">|</span>
+          <a href="/index.html">Cho Người Tìm Việc</a>
+          <a class="btn btn--ghost" href="#">Đăng nhập</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img src="/images/human-ai-touch.jpg" alt="Hero banner" />
+    </section>
+
+    <!-- SCROLL ICON -->
+    <div class="scroll-down" id="scroll-down">👇</div>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="container">
+        <h1>DỊCH VỤ CỦA CHÚNG TÔI</h1>
+        <p class="sub">
+          Chúng tôi cung cấp nhiều dịch vụ giúp nhà tuyển dụng kết nối với nhiều
+          nhân tài hơn, để họ có thể kết nối với ứng cử viên nhanh hơn
+        </p>
+
+        <!-- ĐĂNG TUYỂN -->
+        <div class="service-row">
+          <!-- TEXT -->
+          <div class="service-text">
+            <h3>Đăng tuyển</h3>
+
+            <div class="price">2,160,000 VND</div>
+            <div class="old-price">2,400,000 VND – giảm 10%</div>
+
+            <ul class="service-list">
+              <li>Đảm bảo hài lòng 100%</li>
+              <li>Đăng tuyển nhanh chóng và nhận hồ sơ ngay lập tức</li>
+              <li>Quản lý hồ sơ trực tuyến của bạn dễ dàng</li>
+            </ul>
+
+            <p class="note">
+              Chương trình chỉ áp dụng cho đơn hàng trực tuyến, không áp dụng
+              đồng thời với các chương trình khuyến mãi khác
+            </p>
+
+            <button class="btn-outline">Mua ngay</button>
+          </div>
+
+          <!-- IMAGE -->
+          <div class="service-image">
+            <img src="/images/uppost_img.jpg" alt="Đăng tuyển" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT MODAL -->
+    <div id="contact-modal" class="modal">
+      <div class="modal-overlay" id="modal-overlay"></div>
+
+      <div class="modal-box">
+        <a href="#" class="modal-close" id="close-modal">✕</a>
+
+        <h3>Để lại thông tin để được tư vấn giải pháp tuyển dụng</h3>
+
+        <form class="modal-form">
+          <label>Họ và Tên *</label>
+          <input type="text" id="fullname" placeholder="Nhập họ và tên" />
+
+          <label>Tên Công Ty *</label>
+          <input type="text" id="company" placeholder="Tên công ty" />
+
+          <label>Địa Điểm</label>
+          <select>
+            <option>Chọn địa điểm...</option>
+            <option>Hà Nội</option>
+            <option>TP. Hồ Chí Minh</option>
+          </select>
+
+          <label>Số Điện Thoại *</label>
+          <input type="tel" placeholder="Số điện thoại" />
+
+          <label>Email *</label>
+          <input type="email" placeholder="Email" />
+
+          <label class="checkbox">
+            <input type="checkbox" />
+            Tôi đồng ý với chính sách bảo mật của VietnamWorks
+          </label>
+
+          <button type="submit" class="btn-submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+    <script src="/js/employer.js"></script>
+  </body>
+</html>
