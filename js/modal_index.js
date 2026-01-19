@@ -1,18 +1,39 @@
 export function setupLoginModal() {
-  const modal = document.getElementById("login-modal");
-  const overlay = document.getElementById("login-overlay");
-  const close = document.getElementById("close-modal");
-  const open = document.querySelector(".btn--ghost");
+  const loginModal = document.getElementById("login-modal");
+  const registerModal = document.getElementById("register-modal");
 
-  open.addEventListener("click", (e) => {
+  const openLogin = document.getElementById("open-signin");
+  const closeLogin = document.getElementById("close-modal");
+  const closeRegister = document.getElementById("close-register");
+
+  const loginOverlay = document.getElementById("login-overlay");
+  const registerOverlay = document.getElementById("register-overlay");
+
+  const switchToLogin = document.getElementById("switch-to-login");
+
+  openLogin.addEventListener("click", (e) => {
     e.preventDefault();
-    modal.style.display = "flex";
+    loginModal.classList.add("show");
   });
 
-  function closeModal() {
-    modal.style.display = "none";
+  function closeAll() {
+    loginModal.classList.remove("show");
+    registerModal.classList.remove("show");
   }
 
-  close.addEventListener("click", closeModal);
-  overlay.addEventListener("click", closeModal);
+  closeLogin.addEventListener("click", closeAll);
+  loginOverlay.addEventListener("click", closeAll);
+
+  closeRegister.addEventListener("click", closeAll);
+  registerOverlay.addEventListener("click", closeAll);
+
+  switchToLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    registerModal.classList.remove("show");
+    loginModal.classList.add("show");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeAll();
+  });
 }
