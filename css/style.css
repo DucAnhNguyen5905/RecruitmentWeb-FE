@@ -85,6 +85,38 @@ a {
   background-color: #6b7280;
 }
 
+.login-form button {
+  margin-top: 10px;
+  height: 40px;
+  background: #22c55e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background: #16a34a;
+}
+
+/* ===== CLOSE ===== */
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  opacity: 0.8;
+}
+
 /* Hero */
 .hero {
   background: linear-gradient(180deg, #0b4dbf, #0a3d91);
@@ -164,7 +196,24 @@ a {
   font-size: 13px;
   opacity: 0.85;
 }
+/* Form */
+.login-form input {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: none;
+  background: #f3f4f6;
+  font-size: 14px;
+  color: #111827;
+}
 
+.login-form input::placeholder {
+  color: #9ca3af;
+}
+
+.login-form input:focus {
+  outline: 2px solid #60a5fa;
+}
 /* Main blocks */
 .main {
   padding: 26px 0 10px;
@@ -389,6 +438,80 @@ a {
   color: #fff;
   text-align: center;
   padding: 18px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-box {
+  position: relative;
+  width: 380px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.modal-box h3 {
+  margin: 0;
+  padding: 16px 20px;
+  background: #ff5a5f;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-form label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.modal-form input {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: none;
+  background: #f3f4f6;
+  font-size: 14px;
+}
+
+.modal-form input:focus {
+  outline: 2px solid #60a5fa;
+}
+
+/* ERROR */
+.error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+.input-error {
+  border: 1px solid #dc2626;
 }
 
 /* Responsive */

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,7 @@
           <a href="/pages/employer.html">Nhà tuyển dụng</a>
           <a href="#">Ngôn ngữ</a>
           <a href="#">Thông báo</a>
-          <a class="btn btn--ghost" href="#">Đăng nhập</a>
+          <a class="btn btn--ghost" href="#" id="open-signin">Đăng nhập</a>
         </nav>
       </div>
     </header>
@@ -52,13 +52,17 @@
         <div class="banner">
           <div
             class="banner__img"
-            style="background-image: url('images/Tap-doan-Vingroup.jpg')"
+            style="
+              background-image: url(&quot;images/Tap-doan-Vingroup.jpg&quot;);
+            "
           ></div>
           <div class="banner__bottom">
             <div class="banner__brand">
               <div
                 class="brand__logo"
-                style="background-image: url('images/Vsmart-logo.jpg')"
+                style="
+                  background-image: url(&quot;images/Vsmart-logo.jpg&quot;);
+                "
               ></div>
               <div>
                 <div class="brand__title">Join with Us</div>
@@ -88,8 +92,9 @@
               ><img src="images/logo-fpt.jpg" alt="FPT"
             /></a>
             <a class="logo-card" href="#"
-              ><img src="images/logo-vpbank.jpg" alt="VPBank"
-            /></a>
+              ><img src="images/logo-vpbank.jpg" alt="VPBank" /></a
+            >1
+
             <a class="logo-card" href="#"
               ><img src="images/logo-xanhsm.jpg" alt="XanhSM"
             /></a>
@@ -111,7 +116,7 @@
               <div class="job-card__top">
                 <div
                   class="job-logo"
-                  style="background-image: url('images/logo-fpt.jpg')"
+                  style="background-image: url(&quot;images/logo-fpt.jpg&quot;)"
                 ></div>
                 <div>
                   <h3>Frontend Developer</h3>
@@ -133,7 +138,9 @@
               <div class="job-card__top">
                 <div
                   class="job-logo"
-                  style="background-image: url('images/logo-viettel.jpg')"
+                  style="
+                    background-image: url(&quot;images/logo-viettel.jpg&quot;);
+                  "
                 ></div>
                 <div>
                   <h3>Backend Developer</h3>
@@ -155,7 +162,9 @@
               <div class="job-card__top">
                 <div
                   class="job-logo"
-                  style="background-image: url('images/logo-vingroup.jpg')"
+                  style="
+                    background-image: url(&quot;images/logo-vingroup.jpg&quot;);
+                  "
                 ></div>
                 <div>
                   <h3>Nhân viên Sale</h3>
@@ -241,7 +250,9 @@
               <div class="list-item__left">
                 <div
                   class="job-logo"
-                  style="background-image: url('images/logo-vnggames.jpg')"
+                  style="
+                    background-image: url(&quot;images/logo-vnggames.jpg&quot;);
+                  "
                 ></div>
                 <div>
                   <div class="list-title">Junior UI/UX Designer</div>
@@ -258,7 +269,9 @@
               <div class="list-item__left">
                 <div
                   class="job-logo"
-                  style="background-image: url('images/Vsmart-logo.jpg')"
+                  style="
+                    background-image: url(&quot;images/Vsmart-logo.jpg&quot;);
+                  "
                 ></div>
 
                 <div>
@@ -276,7 +289,9 @@
               <div class="list-item__left">
                 <div
                   class="job-logo"
-                  style="background-image: url('images/logo-viettel.jpg')"
+                  style="
+                    background-image: url(&quot;images/logo-viettel.jpg&quot;);
+                  "
                 ></div>
                 <div>
                   <div class="list-title">Intern Data</div>
@@ -305,7 +320,7 @@
               <div class="employer-body">
                 <div
                   class="employer-logo"
-                  style="background-image: url('images/logo-fpt.jpg')"
+                  style="background-image: url(&quot;images/logo-fpt.jpg&quot;)"
                 ></div>
                 <div>
                   <div class="employer-name">FPT</div>
@@ -320,7 +335,9 @@
               <div class="employer-body">
                 <div
                   class="employer-logo"
-                  style="background-image: url('images/logo-bidv.jpg')"
+                  style="
+                    background-image: url(&quot;images/logo-bidv.jpg&quot;);
+                  "
                 ></div>
                 <div>
                   <div class="employer-name">BIDV</div>
@@ -339,7 +356,7 @@
               <div class="employer-body">
                 <div
                   class="employer-logo"
-                  style="background-image: url('images/logo-mb.jpg')"
+                  style="background-image: url(&quot;images/logo-mb.jpg&quot;)"
                 ></div>
                 <div>
                   <div class="employer-name">MB Bank</div>
@@ -397,22 +414,28 @@
       </div>
     </main>
 
-    <footer class="footer">© 2025 VietnamWorks - Demo</footer>
-
-    <!--LOGIN MODAL-->
+    <!-- LOGIN MODAL -->
     <div id="login-modal" class="modal">
-      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-overlay" id="login-overlay"></div>
 
       <div class="modal-box">
-        <a href="#" class="modal-close" id="close-modal">X</a>
-        <h3>Để lại thông tin để được tư vấn giải pháp tuyển dụng</h3>
-        <form class="modal-form">
-          <label>Email*</label>
-          <input type="text" id="email" placeholder="Nhập email" />
+        <a href="#" class="modal-close" id="close-modal">✕</a>
+        <h3>🔒 Sign In</h3>
+
+        <form class="login-form">
+          <label>E-mail address</label>
+          <input type="text" id="login-email" placeholder="mail@address.com" />
+
           <label>Password</label>
-          <input type="text" id="password" placeholder="Nhập mật khẩu" />
+          <input type="password" id="login-password" placeholder="••••••••" />
+
+          <button type="submit">Sign In</button>
         </form>
       </div>
     </div>
+
+    <script type="module" src="/js/index.js"></script>
+
+    <footer class="footer">© 2025 VietnamWorks - Demo</footer>
   </body>
 </html>
