@@ -52,7 +52,11 @@ export function setupRegisterForm() {
       Object.values(rules).every((r) => r.checked)
     );
   }
-
+  username.addEventListener("text", () => {
+    username.value.trim()
+      ? clearError(username)
+      : showError(email, "Vui lòng nhập Username");
+  });
   password.addEventListener("input", () => {
     checkPassword(password.value);
     submitBtn.disabled = !isFormValid();
